@@ -25,7 +25,7 @@ import sun.misc.BASE64Decoder;
 @RestController
 public class ServiceImplController {
 
-	@GetMapping("/os")
+	@GetMapping("/OsName")
 
 	public String getOsName(){
         String os = System.getProperty("os.name");
@@ -47,7 +47,7 @@ public class ServiceImplController {
 	   
         
     }
-	@GetMapping("/screenshot")
+	@GetMapping("/Screenshot")
 	public String getScreenshot() {
         try{
             System.setProperty("java.awt.headless", "false");

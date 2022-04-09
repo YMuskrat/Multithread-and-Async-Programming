@@ -4,7 +4,7 @@ const fs = require("fs")
 let url = "http://localhost:8080";
 
 function getOS() {
-  const fetchPromise = fetch(url + '/os');
+  const fetchPromise = fetch(url + '/OsName');
 
   fetchPromise.then(res => {
     res.text().then(osname => console.log(osname))
@@ -12,7 +12,7 @@ function getOS() {
 }
 
 function getScreenShot() {
-  const fetchPromise = fetch(url + '/screenshot');
+  const fetchPromise = fetch(url + '/Screenshot');
   fetchPromise.then(res => {
     res.text().then(screenshot => {
       var buffer = Buffer.from(screenshot, "base64")
